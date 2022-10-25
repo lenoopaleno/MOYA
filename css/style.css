@@ -64,8 +64,9 @@ p {
 #titlerphoto{
 	height: 170px;
 	padding-bottom: 30px;
-	margin: auto;
 	display: flex;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
