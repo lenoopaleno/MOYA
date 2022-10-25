@@ -65,6 +65,7 @@ p {
 	height: 170px;
 	padding-bottom: 30px;
 	margin: auto;
+	display: flex;
 }
 
 
@@ -89,6 +90,18 @@ p {
 	padding: 1.8rem 1rem;
 	font-family: 'Alegreya Sans', sans-serif;
 	background-color: #fff;	
+}
+
+@media screen and (max-width:991px){
+	.linkedin{
+		display: none;
+	}
+}
+
+@media screen and (min-width:991px){
+	.insta{
+		display: none;
+	}
 }
 
 @media screen and (max-width:991px){	
@@ -219,7 +232,7 @@ p {
 	right: 22px;
 }
 
-.nav-item {
+.nav-item, .insta {
 	font-size: 1.2rem;
 }
 
