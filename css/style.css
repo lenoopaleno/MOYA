@@ -199,6 +199,7 @@ p {
 	align-content: center;
 	position: absolute;
 	right: 20px;
+	position: fixed;
 }
 
 .navbar-brand {
@@ -226,9 +227,9 @@ p {
 	vertical-align: middle;
 	height: 31px;
 	width: 35px;
-	right: 0px;
-	top: 0;
-	position: absolute;
+	position: fixed;
+	top: 14px;
+	right: 22px;
 }
 
 .menu-toggle:before {
@@ -399,7 +400,7 @@ p {
 .navbar-toggler {
 	height: 30px;
 	width: 21px;
-	position: absolute;
+	position: fixed;
 	right: 22px;
 }
 
