@@ -13,6 +13,7 @@ html,
 body,
 .Container {
 	height: 100%;
+	width: auto;
 	font-family: 'Alegreya Sans', sans-serif;
 }
 
@@ -71,13 +72,30 @@ p {
 	padding-left: 0px;
 }
 .titler2photo{
-	height: 150px;
+	height: 180px;
 	padding-bottom: 30px;
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
 	padding-right: 0px;
 	padding-left: 0px;
+}
+
+.img-pion {
+    max-width: 100%;
+    height: auto;
+}
+.img-poziom {
+    max-width: 100%;
+    height: auto;
+}
+.img-oferta{
+	max-width: 100%;
+	height: auto;
+}
+.img-oferta-arch{
+	max-width: 100%;
+	height: auto;
 }
 
 @media screen and (max-width:991px) {
@@ -101,6 +119,21 @@ p {
 	}
 }
 
+@media screen and (min-width: 1000px){
+	.img-pion{
+		width: 85%;
+	}
+	.img-poziom{
+		max-width: 130%;
+	}
+	.img-oferta{
+		width: 70%;
+	}
+	.img-oferta-arch{
+		width: 100%;
+		padding-top: 150px
+	}
+}
 
 /* Spacing */
 

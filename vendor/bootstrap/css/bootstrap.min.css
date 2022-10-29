@@ -504,8 +504,9 @@ mark {
 
 .img-fluid {
     max-width: 100%;
-    height: auto
+    height: auto;
 }
+
 
 .img-thumbnail {
     padding: .25rem;
@@ -654,8 +655,7 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+
     padding-top: 0px;
 }
 
