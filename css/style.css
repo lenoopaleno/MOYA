@@ -201,6 +201,11 @@ p {
 	right: 20px;
 	position: fixed;
 }
+@media screen and (min-width:991px){	
+	.navbar .navbar-collapse{
+		position:absolute;
+	}
+	}
 
 .navbar-brand {
 	padding-top: 0; 
@@ -608,3 +613,30 @@ p {
 .social-icon:hover {
 		color: #77D934;
 }
+.back-to-top {
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	border-radius: 100%;
+	background: #77D934;
+	padding: 0.5rem;
+	border: none;
+	cursor: pointer;
+	opacity: 100%;
+	transition: opacity 0.5s
+  }
+
+  .hidden {
+	opacity: 0%;
+  }
+  .back-to-top-icon {
+	width: 2rem;
+	height: 2rem;
+	color: #ffffff;
+  }
+
+
+
+  .back-to-top:hover {
+	opacity: 60%;
+  }
