@@ -623,7 +623,8 @@ p {
 	border: none;
 	cursor: pointer;
 	opacity: 100%;
-	transition: opacity 0.5s
+	transition: opacity 0.5s;
+	z-index: 9999;
   }
 
   .hidden {
