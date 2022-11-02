@@ -85,15 +85,16 @@
          <div class="row" style="padding-left: 45px; padding-right: 45px">
             <div class="col-md-10 offset-md-1 col-sm-12">
                <h2> Powinniśmy się do Ciebie odezwać? </h2>
-               <form  id = class="form-inline pt-5">
                   <div class="form-group mb-2">
-                     <input type="text" class="form-control" id="inputName" placeholder="Imię i nazwisko">
-                     <input type="text" class="form-control" id="inputMail" placeholder="E-mail">
-                     <input type="checkbox" id="regulamin" value="True">
-                     <label for="regulamin" style = "padding-left: 10px;">Przykładowy tekst</label>
+                     <input type="text" class="form-control" name="inputName" placeholder="Imię i nazwisko">
+                     <div id = "dialog-error1" style="color:red" style="display:none"></div>
+                     <input type="email" class="form-control" name="inputMail" placeholder="E-mail">
+                     <div id = "dialog-error2" style="color:red" style="display:none"></div>
+                     <input type="checkbox" name="regulamin">
+                     <div id = "dialog-error3" style="color:red" style="display:none"></div>
+                     <label for="regulamin" style = "padding-left: 10px;">Wyrażam zgodę na otrzymywanie od MOYA Enigneering NIP: 742-202-56-06  newslettera, czyli informacji i ofert o tematyce projektowej, architektonicznej i aranżatorskiej za pośrednictwem komunikacji e-mail.</label>
                   </div>
                   <button type="submit" class="mx-sm-4 btn btn-primary mb-2" id = "send">WYŚLIJ</button>
-               </form>
             </div>
          </div>
       </div>

@@ -47,19 +47,40 @@ const goToTop = () => {
 
 $("#send").click(function(){
   $.ajax({
-    url: "http://localhost/skrypty/kalendarz/form.php",
+    url: "php/form.php",
     method: "POST",
     dataType: "json",
     data: {
       user: $( "input[name='inputName']" ).val(),
       mail: $( "input[name='inputMail']" ).val(),
-      checkbox: $( "input[name='regulamin']" ).val(),
+      checkbox: $( "input[name='regulamin']" ).is(":checked"),
     },
     error: function(){alert("Wystąpił błąd")},
     success: function(a, b){
       if (a.wynik == "OK") {
         alert("ez");
+      }
+      else if (a.wynik == "error") {
+        if (typeof a.errors.e_name != "undefined"){
+         document.getElementById("dialog-error1").style.display="";
+         $('#dialog-error1').empty().append(a.errors.e_name);
+       } else{
+         document.getElementById("dialog-error1").style.display="none";
+       }
+        if (typeof a.errors.e_mail != "undefined"){
+         document.getElementById("dialog-error2").style.display="";
+         $('#dialog-error2').empty().append(a.errors.e_mail);
+       } else{
+         document.getElementById("dialog-error2").style.display="none";
+       }
+        if (typeof a.errors.e_regulamin != "undefined"){
+         document.getElementById("dialog-error3").style.display="";
+         $('#dialog-error3').empty().append(a.errors.e_regulamin);
+       } else{
+         document.getElementById("dialog-error3").style.display="none";
+       }
+      }
     }
-    });
+  });
 });
 });
