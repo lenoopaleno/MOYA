@@ -1,4 +1,5 @@
 /* Menu Toggle */
+$(function() {
 
 $(document).ready(function(){
    $("#toggler").click(function(){
@@ -44,7 +45,7 @@ const goToTop = () => {
 };
 //backToTopButton.addEventListener("click", goToTop)
 
-$('#send').click(function(){
+$("#send").click(function(){
   $.ajax({
     url: "http://localhost/skrypty/kalendarz/form.php",
     method: "POST",
@@ -60,4 +61,5 @@ $('#send').click(function(){
         alert("ez");
     }
     });
+});
 });
