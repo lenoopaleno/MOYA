@@ -42,4 +42,22 @@ document.addEventListener("scroll", () => {
 const goToTop = () => {
   document.body.scrollIntoView({behavior: "smooth"});
 };
-backToTopButton.addEventListener("click", goToTop)
+//backToTopButton.addEventListener("click", goToTop)
+
+$('#send').click(function(){
+  $.ajax({
+    url: "http://localhost/skrypty/kalendarz/form.php",
+    method: "POST",
+    dataType: "json",
+    data: {
+      user: $( "input[name='inputName']" ).val(),
+      mail: $( "input[name='inputMail']" ).val(),
+      checkbox: $( "input[name='regulamin']" ).val(),
+    },
+    error: function(){alert("Wystąpił błąd")},
+    success: function(a, b){
+      if (a.wynik == "OK") {
+        alert("ez");
+    }
+    });
+});
