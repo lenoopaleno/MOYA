@@ -53,7 +53,8 @@ const goToTop = () => {
       data: {
         user: $( "input[name='inputName']" ).val(),
         mail: $( "input[name='inputMail']" ).val(),
-        checkbox: $( "input[name='regulamin']" ).is(":checked"),
+        checkbox1: $( "input[name='regulamin']" ).is(":checked"),
+        checkbox2: $( "input[name='news']" ).is(":checked"),
       },
       error: function(){alert("Wystąpił błąd")},
       success: function(a, b){

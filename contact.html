@@ -17,7 +17,7 @@
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <!-- reCaptcha -->
       <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf1Ot0iAAAAANeOKQwB5DHldNibpqXur4jrUzsa"></script>
-      
+
    </head>
    <body>
       <nav class="navbar navbar-expand-lg navbar-dark">
@@ -90,12 +90,17 @@
                <h2> Powinniśmy się do Ciebie odezwać? </h2>
                   <div class="form-group mb-2">
                      <input type="text" class="form-control" name="inputName" placeholder="Imię i nazwisko">
-                     <div id = "dialog-error1" style="color:red" style="display:none"></div>
+                     <div class = "form-error" id = "dialog-error1" style = "display: none;"></div>
                      <input type="email" class="form-control" name="inputMail" placeholder="E-mail">
-                     <div id = "dialog-error2" style="color:red" style="display:none"></div>
-                     <input type="checkbox" name="regulamin">
-                     <div id = "dialog-error3" style="color:red" style="display:none"></div>
-                     <label for="regulamin" style = "padding-left: 10px;">Wyrażam zgodę na otrzymywanie od MOYA Enigneering NIP: 742-202-56-06  newslettera, czyli informacji i ofert o tematyce projektowej, architektonicznej i aranżatorskiej za pośrednictwem komunikacji e-mail.</label>
+                     <div id = "dialog-error2" class = "form-error" style = "display: none;"></div>
+                     <input type="checkbox" name="regulamin" style="float: left; margin-top: 5px;>">
+                     <div style="margin-left: 25px;">
+                       Wyrażam zgodę na otrzymywanie od MOYA Enigneering NIP: 742-202-56-06  newslettera, czyli
+                       informacji i ofert o tematyce projektowej, architektonicznej i aranżatorskiej za pośrednictwem komunikacji e-mail.
+                     </div>
+                     <div id = "dialog-error3" class = "form-error" style = "display: none;"></div>
+                     <input type="checkbox" name="news" style="float: left; margin-top: 5px;>">
+                     <div style="margin-left: 25px;"> Zgoda na newslettera!</div>
                   </div>
                   <button type="submit" class="mx-sm-4 btn btn-primary mb-2" id = "send">WYŚLIJ</button>
             </div>

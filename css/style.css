@@ -629,7 +629,6 @@ ol{
 	transition: opacity 0.5s;
 	z-index: 9999;
   }
-
   .hidden {
 	opacity: 0%;
   }
@@ -642,11 +641,11 @@ ol{
 	opacity: 60%;
   }
 	.form-error {
-		display:none;
 		color: white;
 		background-color: red;
 		border-radius: 25px;
 		padding: 5px;
 		width: 300px;
 		text-align: center;
+		margin-top: 5px;
 	}

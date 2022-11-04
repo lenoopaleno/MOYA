@@ -8,7 +8,8 @@ require 'phpmailer/src/SMTP.php';
 
 $name = $_POST['user'];
 $newmail = $_POST['mail'];
-$regulamin = $_POST['checkbox'];
+$regulamin = $_POST['checkbox1'];
+$news = $_POST['checkbox2'];
 $errors = [];
 
     if(strlen($name) < 1){
@@ -24,8 +25,9 @@ $errors = [];
       echo json_encode([ 'wynik' => "error", 'errors' => $errors ]);
     } else {
       echo json_encode([ 'wynik' => "OK" ]);
+
         $mail = new PHPMailer(true);
-        
+
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
