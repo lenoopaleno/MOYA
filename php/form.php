@@ -9,7 +9,7 @@ require 'phpmailer/src/SMTP.php';
 $name = $_POST['user'];
 $newmail = $_POST['mail'];
 $regulamin = $_POST['checkbox1'];
-$news = $_POST['checkbox2'];
+//$news = $_POST['checkbox2'];
 $errors = [];
 
     if(strlen($name) < 1){
@@ -29,11 +29,11 @@ $errors = [];
         $mail = new PHPMailer(true);
 
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
 
-        $mail->Username = "moyanewsletter@gmail.com";
-        $mail->Password = "ubluhtrcjoqucrvb";
+        $mail->Username = "moyanewsletter@gmail.com"; //moyanewsletter@gmail.com
+        $mail->Password = "qtcvhpywxjbnipiy"; //qtcvhpywxjbnipiy
         $mail->SMTPSecure = "ssl";
         $mail->Port = 465;
 
