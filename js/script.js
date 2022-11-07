@@ -43,7 +43,7 @@ document.addEventListener("scroll", () => {
 const goToTop = () => {
   document.body.scrollIntoView({behavior: "smooth"});
 };
-//backToTopButton.addEventListener("click", goToTop)
+backToTopButton.addEventListener("click", goToTop);
 
   $("#send").click(function(){
     $.ajax({
@@ -59,7 +59,7 @@ const goToTop = () => {
       error: function(){alert("Wystąpił błąd")},
       success: function(a, b){
         if (a.wynik == "OK") {
-          window.reload();
+          window.location.reload();
         }
         else if (a.wynik == "error") {
           if (typeof a.errors.e_name != "undefined"){
