@@ -1,4 +1,5 @@
 /* Menu Toggle */
+$(function() {
 
 $(document).ready(function(){
    $("#toggler").click(function(){
@@ -42,4 +43,45 @@ document.addEventListener("scroll", () => {
 const goToTop = () => {
   document.body.scrollIntoView({behavior: "smooth"});
 };
-backToTopButton.addEventListener("click", goToTop)
+backToTopButton.addEventListener("click", goToTop);
+
+  $("#send").click(function(){
+    $.ajax({
+      url: "php/form.php",
+      method: "POST",
+      dataType: "json",
+      data: {
+        user: $( "input[name='inputName']" ).val(),
+        mail: $( "input[name='inputMail']" ).val(),
+        checkbox1: $( "input[name='regulamin']" ).is(":checked"),
+        checkbox2: $( "input[name='news']" ).is(":checked"),
+      },
+      error: function(){alert("Wystąpił błąd")},
+      success: function(a, b){
+        if (a.wynik == "OK") {
+          window.location.reload();
+        }
+        else if (a.wynik == "error") {
+          if (typeof a.errors.e_name != "undefined"){
+           document.getElementById("dialog-error1").style.display="";
+           $('#dialog-error1').empty().append(a.errors.e_name);
+         } else{
+           document.getElementById("dialog-error1").style.display="none";
+         }
+          if (typeof a.errors.e_mail != "undefined"){
+           document.getElementById("dialog-error2").style.display="";
+           $('#dialog-error2').empty().append(a.errors.e_mail);
+         } else{
+           document.getElementById("dialog-error2").style.display="none";
+         }
+          if (typeof a.errors.e_regulamin != "undefined"){
+           document.getElementById("dialog-error3").style.display="";
+           $('#dialog-error3').empty().append(a.errors.e_regulamin);
+         } else{
+           document.getElementById("dialog-error3").style.display="none";
+         }
+        }
+      }
+    });
+  });
+});

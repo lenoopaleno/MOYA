@@ -15,8 +15,27 @@
       <link rel="icon" href="img/favicon.ico"/>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <!-- reCaptcha -->
+      <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf1Ot0iAAAAANeOKQwB5DHldNibpqXur4jrUzsa"></script>
+
    </head>
    <body>
+     <button class="back-to-top hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="back-to-top-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M7 11l5-5m0 0l5 5m-5-5v12"
+          />
+        </svg>
+      </button>
       <nav class="navbar navbar-expand-lg navbar-dark">
          <a class="navbar-brand mx-auto" href="index.html">
             <img src="img/moya-logo.png" height="50" alt="Moya Engineering">
@@ -81,24 +100,28 @@
             </div>
          </div>
       </div>
-      <!-- End Contact -->
-      <!-- Contact Form 
       <div class="container-fluid contact-form">
          <div class="row" style="padding-left: 45px; padding-right: 45px">
             <div class="col-md-10 offset-md-1 col-sm-12">
-               <h2> Powinniśmy się do Ciebie odezwać? Zostaw nam swój numer, oddzwonimy najszybciej jak to możliwe </h2>
-               <form class="form-inline pt-5">
+               <h2> Powinniśmy się do Ciebie odezwać? </h2>
                   <div class="form-group mb-2">
-                     <input type="phone" class="form-control" id="inputPhone" placeholder="Twój numer telefonu">
+                     <input type="text" class="form-control" name="inputName" placeholder="Imię i nazwisko">
+                     <div class = "form-error" id = "dialog-error1" style = "display: none;"></div>
+                     <input type="email" class="form-control" name="inputMail" placeholder="E-mail">
+                     <div id = "dialog-error2" class = "form-error" style = "display: none;"></div>
+                     <input type="checkbox" name="regulamin" style="float: left; margin-top: 5px;>">
+                     <div style="margin-left: 25px;">
+                       Wyrażam zgodę na otrzymywanie od MOYA Enigneering NIP: 742-202-56-06  newslettera, czyli
+                       informacji i ofert o tematyce projektowej, architektonicznej i aranżatorskiej za pośrednictwem komunikacji e-mail.
+                     </div>
+                     <div id = "dialog-error3" class = "form-error" style = "display: none;"></div>
+                     <input type="checkbox" name="news" style="float: left; margin-top: 5px;>">
+                     <div style="margin-left: 25px;"> Zgoda na newslettera!</div>
                   </div>
-                  <button type="submit" class="mx-sm-4 btn btn-primary mb-2">WYŚLIJ</button>
-               </form>
+                  <button type="submit" class="mx-sm-4 btn btn-primary mb-2" id = "send">WYŚLIJ</button>
             </div>
          </div>
       </div>
-      -->
-      <!-- End Contact Form -->
-      <!-- Javascript -->
       <script src="vendor/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
       <script src="vendor/wow/wow.js"></script>

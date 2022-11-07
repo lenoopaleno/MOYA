@@ -158,7 +158,7 @@ ol{
 	height: 5%;
 	padding: 1.8rem 1rem;
 	font-family: 'Alegreya Sans', sans-serif;
-	background-color: #fff;	
+	background-color: #fff;
 }
 
 
@@ -168,7 +168,7 @@ ol{
 	}
 }
 
-@media screen and (max-width:991px){	
+@media screen and (max-width:991px){
 .navbar {
 	background-color: transparent;
 }
@@ -204,14 +204,14 @@ ol{
 	right: 20px;
 	position: fixed;
 }
-@media screen and (min-width:991px){	
+@media screen and (min-width:991px){
 	.navbar .navbar-collapse{
 		position:absolute;
 	}
 	}
 
 .navbar-brand {
-	padding-top: 0; 
+	padding-top: 0;
 }
 
 .wrapper {
@@ -629,7 +629,6 @@ ol{
 	transition: opacity 0.5s;
 	z-index: 9999;
   }
-
   .hidden {
 	opacity: 0%;
   }
@@ -638,9 +637,15 @@ ol{
 	height: 2rem;
 	color: #ffffff;
   }
-
-
-
   .back-to-top:hover {
 	opacity: 60%;
   }
+	.form-error {
+		color: white;
+		background-color: red;
+		border-radius: 25px;
+		padding: 5px;
+		width: 300px;
+		text-align: center;
+		margin-top: 5px;
+	}
